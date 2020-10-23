@@ -2,7 +2,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* nav bar default (full screen) */
@@ -11,7 +12,6 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  font-family: 'Roboto Condensed', sans-serif;
   background-color: white;
 }
 
@@ -46,7 +46,144 @@ nav{
   margin: 5px;
 }
 
-/* Intro */ 
+/* General section formatting */
+
+section{
+  padding: 5% 5% 5% 5%;
+  }
+
+/* Intro */
+
+.intro__title{
+  padding: 1% 0% 1% 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.intro__para{
+  padding: 0% 0% 2% 0%;
+  width: 50%;
+  font-size: 20px;
+}
+
+
+.learn__more--button a{
+  cursor: pointer;
+  padding: 0.25em 0.25em;
+  text-align: center;
+  display: block;
+  width: 8em;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+}
+
+/* Services */
+
+.services__intro__title{
+  padding: 1% 0% 1% 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.services__intro__para{
+  padding: 0% 0% 2% 0%;
+  width: 50%;
+  font-size: 20px;
+}
+
+.services__intro__list li{
+  list-style: none;
+  cursor: pointer;
+}
+.services__intro__list a{
+  direction: ltr;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  color: teal;
+}
+
+/* How it works section */
+
+.how__intro__title{
+  padding: 1% 0% 1% 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.how__intro__list p{
+  padding: 0% 0% 2% 0%;
+  width: 50%;
+  font-size: 20px;
+}
+
+.how__intro--button a{
+  cursor: pointer;
+  padding: 0.25em 0.25em;
+  text-align: center;
+  display: block;
+  width: 8em;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+}
+
+/* Plan section */
+
+.plan__intro__title{
+  padding: 1% 0% 1% 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.plan__intro__para{
+  padding: 0% 0% 2% 0%;
+  width: 50%;
+  font-size: 20px;
+}
+
+.plan__intro__list li{
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  color: teal;
+}
+
+/* about */
+.about__intro__title{
+  padding: 1% 0% 1% 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about__intro__para{
+  padding: 0% 0% 2% 0%;
+  width: 50%;
+  font-size: 20px;
+}
+
+.about__intro--button a{
+  cursor: pointer;
+  padding: 0.25em 0.25em;
+  text-align: center;
+  display: block;
+  width: 8em;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+}
 
 
 /* Variation for mobile screens */ 
