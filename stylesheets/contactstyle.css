@@ -1,0 +1,265 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+/* nav bar default (full screen) */
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: white;
+}
+
+.logo__image{
+  max-width: 12em;
+}
+.nav__links{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.nav__links a{
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  color: teal;
+}
+.nav__links li{
+  list-style: none;
+  cursor: pointer;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: teal;
+  margin: 5px;
+}
+
+/* Contact page */  
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact__content{
+  max-width: 800px;
+  text-align: center;
+}
+.contact__content__title{
+  padding-bottom:20px ;
+  font-size: 36px;
+  font-weight: 500;
+  color: teal;
+}
+.contact__content__para{
+  font-size: 24px;
+  font-weight: 300;
+  color: teal;
+}
+
+.container{
+  width: 100% ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cantact__info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.icon{
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  background-color: teal;
+  color: white;
+}
+
+.text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+h3{
+  font-weight: 500;
+  color: teal;
+}
+
+.contact__form{
+  width: 40%;
+  padding: 40px;
+}
+.contact__form h2{
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: teal;
+  font-weight: 500;
+}
+.input__box{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.input__box input{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.input__box input, 
+.input__box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid teal;
+  outline: none;
+  resize: none;
+}
+
+.input__message input,
+.input__message textarea{
+  height: 75px;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid teal;
+  outline: none;
+  resize: none;
+}
+.input__box span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.input__box input:focus ~ span,
+.input__box input:valid ~ span,
+.input__box textarea:focus ~ span,
+.input__box textarea:valid ~ span{
+  color: teal;
+  font-size: 12px;
+  transform: translateY(-15px)
+}
+
+.input__box input[type="submit"]{
+  width: 100px;
+  color: white;
+  background-color: teal;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+@media screen and (max-width:768px){
+  .body{
+    overflow-x: hidden;
+  }
+  /* Nav Bar */ 
+  .nav__links{
+    background-color: white;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+  }
+  .nav__links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+
+  /* Contact */
+  .contact{
+    padding: 50px;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+  .cantact__info{
+    margin-bottom: 40px;
+  }
+  .container{
+    width: 100%;
+  }
+  .contact_info, .contact__form{
+    width: 100%;
+  }
+
+
+}
+
+/* Animations */ 
+
+/* animations for Nav bar */ 
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
