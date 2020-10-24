@@ -53,19 +53,38 @@ section{
   }
 
 /* Intro */
+.background__img{
+  width: 100%;
+  overflow: hidden;
+}
+
+.background__img img{
+  width: 100%;
+  min-height: 70%;
+  max-height: 70%;
+}
+
 
 .intro__title{
-  padding: 1% 0% 1% 0%;
+  padding: 1% 0% 1% 2%;
   font-size: 30px;
   font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: -30%;
 }
 
 .intro__para{
-  padding: 0% 0% 2% 0%;
+  padding: 0% 0% 2% 2%;
   width: 50%;
   font-size: 20px;
+  color: white;
+  position: absolute;
+  margin-top: -25%;
 }
-
+.learn__more--button{
+  padding: 0em 1em;
+}
 
 .learn__more--button a{
   cursor: pointer;
@@ -79,6 +98,8 @@ section{
   font-size: 20px;
   background-color: teal;
   color: white;
+  position: absolute;
+  margin-top: -12%;
 }
 
 /* Services */
