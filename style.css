@@ -22,6 +22,7 @@ nav{
   display: flex;
   width: 50%;
   justify-content: space-around;
+  z-index: 1;
 }
 .nav__links a{
   text-decoration: none;
@@ -49,19 +50,39 @@ nav{
 /* General section formatting */
 
 section{
-  padding: 5% 5% 5% 5%;
+  padding: 5% 0% 5% 0%;
   }
 
 /* Intro */
+.intro{
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
 .background__img{
   width: 100%;
+  height: 80%;
+  position: relative;
   overflow: hidden;
 }
 
 .background__img img{
   width: 100%;
-  min-height: 70%;
-  max-height: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background__img::after{
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
 }
 
 
@@ -72,6 +93,7 @@ section{
   color: white;
   position: absolute;
   margin-top: -30%;
+  z-index: 1;
 }
 
 .intro__para{
@@ -81,9 +103,11 @@ section{
   color: white;
   position: absolute;
   margin-top: -25%;
+  z-index: 1;
 }
 .learn__more--button{
   padding: 0em 1em;
+  z-index: 1;
 }
 
 .learn__more--button a{
@@ -100,10 +124,27 @@ section{
   color: white;
   position: absolute;
   margin-top: -12%;
+  z-index: 1;
+}
+/* Slider */
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+
 }
 
-/* Services */
 
+
+/* Services */
+.services__intro{
+  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+}
 .services__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
@@ -130,6 +171,9 @@ section{
 }
 
 /* How it works section */
+.how__intro{
+  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+}
 
 .how__intro__title{
   padding: 1% 0% 1% 0%;
@@ -158,6 +202,9 @@ section{
 }
 
 /* Plan section */
+.plan__intro{
+  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+}
 
 .plan__intro__title{
   padding: 1% 0% 1% 0%;
@@ -180,6 +227,9 @@ section{
 }
 
 /* about */
+.about__intro{
+  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+}
 .about__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
