@@ -69,12 +69,14 @@ section{
 }
 
 .background__img img{
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .background__img::after{
+  border-radius: 10px;
   content: "";
   background: black;
   width: 100%;
@@ -87,30 +89,24 @@ section{
 
 
 .intro__title{
-  padding: 1% 0% 1% 2%;
-  font-size: 30px;
+  padding: 0em, 1em;
+  font-size: 40px;
   font-weight: bold;
   color: white;
   position: absolute;
-  margin-top: -30%;
+  bottom: 150px;
+  left: 20px;
   z-index: 1;
 }
 
-.intro__para{
-  padding: 0% 0% 2% 2%;
-  width: 50%;
-  font-size: 20px;
-  color: white;
-  position: absolute;
-  margin-top: -25%;
-  z-index: 1;
-}
 .learn__more--button{
   padding: 0em 1em;
   z-index: 1;
+  height: 42px;
 }
 
 .learn__more--button a{
+  border-radius: 10px;
   cursor: pointer;
   padding: 0.25em 0.25em;
   text-align: center;
@@ -135,7 +131,7 @@ section{
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 
 }
 
@@ -143,51 +139,88 @@ section{
 
 /* Services */
 .services__intro{
-  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 }
 .services__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center;
 }
 
 .services__intro__para{
-  padding: 0% 0% 2% 0%;
-  width: 50%;
+  padding: 1% 5% 2% 5%;
+  width: 100%;
   font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.services__intro__list{
+  padding: 4% 0% 4% 0%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .services__intro__list li{
   list-style: none;
   cursor: pointer;
+  display: flex;
+  background-color: teal;
+  height: 200px;
+  width: 200px;
+  align-items: flex-end ;
+  border-radius: 10px;
 }
 .services__intro__list a{
-  direction: ltr;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 1em 1em;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
   font-size: 20px;
-  color: teal;
+  color:white;
+  opacity: 1;
 }
 
 /* How it works section */
 .how__intro{
-  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 }
 
 .how__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center;
 }
 
+.how__intro__list{
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 5% 2% 5%;
+}
+
+.how__intro__list li{
+  display: flex;
+  
+}
 .how__intro__list p{
-  padding: 0% 0% 2% 0%;
-  width: 50%;
+  width: 75%;
   font-size: 20px;
 }
 
+.how__intro--button {
+  padding: 5% 0% 5% 0%;
+  display: flex;
+  justify-content: center;
+}
+
 .how__intro--button a{
+  border-radius: 10px;
   cursor: pointer;
   padding: 0.25em 0.25em;
   text-align: center;
@@ -203,22 +236,30 @@ section{
 
 /* Plan section */
 .plan__intro{
-  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 }
 
 .plan__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center;
 }
 
 .plan__intro__para{
-  padding: 0% 0% 2% 0%;
-  width: 50%;
+  padding: 1% 5% 2% 5%;
+  width: 100%;
   font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.plan__intro__list {
+  padding-left: 5%;
 }
 
 .plan__intro__list li{
+  padding-bottom: 1%;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -228,21 +269,26 @@ section{
 
 /* about */
 .about__intro{
-  background: linear-gradient(to left, #4DCCC6,#96E4DF);
+  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 }
 .about__intro__title{
   padding: 1% 0% 1% 0%;
   font-size: 30px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center;
 }
 
 .about__intro__para{
-  padding: 0% 0% 2% 0%;
+  padding: 1% 0% 2% 5%;
   width: 50%;
   font-size: 20px;
 }
-
+.about__intro--button{
+  padding: 0% 0% 0% 5%;
+}
 .about__intro--button a{
+  border-radius: 10px;
   cursor: pointer;
   padding: 0.25em 0.25em;
   text-align: center;
@@ -256,14 +302,67 @@ section{
   color: white;
 }
 
+/* Footer styles */
+.footer {
+  background:black;
+  color: white;
+  padding: 1% 5%;
+  font-size: var(--fs-h3);
+}
+
+.footer__list{
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: 
+  'list1 list2';
+  grid-template-columns: max-content, max-content;
+}
+.footer__list__1{
+  grid-area: list1;
+}
+.footer__list__2{
+  grid-area: list2;
+  display: flex;
+}
+
+.footer a { 
+  color: white;
+  text-decoration: none;
+}
+.info__list{
+  font-size: 18px;
+}
+.info__list__item{
+  margin-bottom: 1%;
+}
+
+.social-list {
+  display: flex;
+  font-size: 24px;
+  margin: 0 0;
+  padding: 1em 0;
+  justify-content: center;
+}
+
+.social-list__link:hover {
+  opacity: .7;
+  text-decoration: underline;
+}
+
+.social-list__item {
+  margin: 0 1em;
+}
 
 /* Variation for mobile screens */ 
 
 @media screen and (max-width:768px){
   .body{
-    overflow-x: hidden;
+    overflow: hidden;
   }
   /* Nav Bar */ 
+  .nav{
+    position: relative;
+  }
   .nav__links{
     background-color: white;
     position: absolute;
@@ -276,6 +375,7 @@ section{
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.2s ease-in;
+    z-index: 1;
   }
   .nav__links li{
     opacity: 0;
@@ -285,7 +385,45 @@ section{
   }
 
   /* Intro */ 
+  .background__img{
+    height: 30%;
+  }
+  .intro__title{
+    font-size: 25px;
+  }
+  .learn__more--button{
+    margin-top: -20%;
+  }
+  .services__intro__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services__intro__list li{
+    margin-bottom: 1em;
+  }
+
+  .how__intro__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .how__intro__list li{
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .how__intro__list p {
+    width: 100%;
+  }
+
+  .about__intro__para{
+    width: 100%;
+  }
+  .footer{
+    padding: 2em 2em;
+  }
 }
+
 
 /* Animations */ 
 
