@@ -1,4 +1,3 @@
-
 // navigation bar slide in mobile
 
 const navSlide = () => {
