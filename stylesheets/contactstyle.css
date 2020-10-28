@@ -117,79 +117,73 @@ h3{
   color: teal;
 }
 
-.contact__form{
-  width: 40%;
-  padding: 40px;
-}
-.contact__form h2{
-  padding-bottom: 10px;
-  font-size: 30px;
-  color: teal;
-  font-weight: 500;
-}
-.input__box{
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-}
-.input__box input{
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-}
-.input__box input, 
-.input__box textarea {
-  width: 100%;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 2px solid teal;
-  outline: none;
-  resize: none;
-}
 
-.input__message input,
-.input__message textarea{
-  height: 75px;
-  width: 100%;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 2px solid teal;
-  outline: none;
-  resize: none;
-}
-.input__box span{
-  position: absolute;
-  left: 0;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  pointer-events: none;
-  transition: 0.5s;
-  color: #666;
-}
-.input__box input:focus ~ span,
-.input__box input:valid ~ span,
-.input__box textarea:focus ~ span,
-.input__box textarea:valid ~ span{
-  color: teal;
-  font-size: 12px;
-  transform: translateY(-15px)
-}
 
-.input__box input[type="submit"]{
+aside {
+  background: #1f8dd6; /* same color as selected state on site menu */
+  padding: 0.3em 1em;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 2em;
+}
+textarea {
+width: 100%;
+}
+.content-head {
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin: 2em 0 1em;
+}
+.is-center {
+text-align: center;
+}
+.button-success {
+color: white;
+border-radius: 4px;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+background:teal; /* this is a green */
+}
+.button-xlarge {
+font-size: 125%;
+}
+button {
   width: 100px;
-  color: white;
-  background-color: teal;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  border-radius: 10px;
+}
+#name, #email {
   font-size: 18px;
+  margin-left: 0.25em;
+  padding: .25em, .25em;
+  height: 48px;
+  width: 50%;
+  border: none;
+}
+#message {
+  font-size: 18px;
+  margin-left: 0.25em;
+  padding: .25em, .25em;
+  border: none;
+  resize: none;
 }
 
+.honeypot-field {
+display: none;
+}
+.contact__form{
+  width: 50%;
+}
+.pure-group{
+  font-size: 20px;
+  padding-left: 0.25em;
+  margin: 0.5em 0.5em;
+  border-radius: 10px;
+  border-color: teal;
+}
 
 @media screen and (max-width:768px){
   .body{
