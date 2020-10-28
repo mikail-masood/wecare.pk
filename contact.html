@@ -64,28 +64,48 @@
       </div>
 
       <div class="contact__form">
-        <form action="https://script.google.com/macros/s/AKfycbxXu__IMOhMfwItzRkErjNAwtk7a_JUkuWM6zaiWi901785O5HT/exec">
-          <h2>Send Message</h2>
-          <div class="input__box">
-            <input type="text" class="form-control" required= "required">
-            <span>Full Name</span>
-          </div>
-          <div class="input__box">
-            <input type="text" class="form-control" required= "required">
-            <span>Email</span>
-          </div>
-          <div class="input__box input__message">
-            <input type="text" class="form-control" required= "required">
-            <span>Type your message here</span>
-          </div>
-          <div class="input__box">
-            <input type="submit" class="form-control submit" value="Submit">
-          </div>
-        </form>
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="wecare.pk.corp@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbxXu__IMOhMfwItzRkErjNAwtk7a_JUkuWM6zaiWi901785O5HT/exec">
+    <!-- change the form action to your script url -->
+
+    <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="Full Name" />
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="message">Message: </label>
+        <textarea id="message" name="message" rows="10"
+        placeholder="Tell us what's on your mind..."></textarea>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="email"><em>Your</em> Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+        required placeholder="your.name@email.com"/>
+      </fieldset>
+
+      <fieldset class="pure-group honeypot-field">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </fieldset>
+
+      <button class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="thankyou_message" style="display:none;">
+      <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
+
+  </form>
       </div>
     </div>
   </section>
-
+  <script data-cfasync="false" src="form-submission-handler.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
