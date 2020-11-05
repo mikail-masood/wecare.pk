@@ -56,14 +56,14 @@ section{
 /* Intro */
 .intro{
   display: flex;
-  height: 80vh;
+  height: 92vh;
   justify-content: center;
   align-items: center;
 }
 
 .background__img{
   width: 100%;
-  height: 80%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -129,7 +129,7 @@ section{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   z-index: -1;
   background: linear-gradient(to left, #B8C6DB,#F5F7FA);
 
@@ -139,10 +139,27 @@ section{
 
 /* Services */
 .services__intro{
-  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
+  position: relative;
+  height: max-content;
 }
+.services__intro::after{
+  content: "";
+  background-image:url("./images/IMG-20201029-WA0010.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+
 .services__intro__title{
-  padding: 1% 0% 1% 0%;
+  padding: 1% 0% 3% 0%;
   font-size: 30px;
   font-weight: bold;
   justify-content: center;
@@ -150,7 +167,7 @@ section{
 }
 
 .services__intro__para{
-  padding: 1% 5% 2% 5%;
+  padding: 1% 10% 2% 10%;
   width: 100%;
   font-size: 20px;
   justify-content: center;
@@ -158,7 +175,7 @@ section{
 }
 
 .services__intro__list{
-  padding: 4% 0% 4% 0%;
+  padding: 8% 0% 2% 0%;
   display: flex;
   justify-content: space-around;
 }
@@ -167,27 +184,122 @@ section{
   list-style: none;
   cursor: pointer;
   display: flex;
-  background-color: teal;
   height: 200px;
   width: 200px;
   align-items: flex-end ;
   border-radius: 10px;
 }
+
 .services__intro__list a{
   text-align: center;
   height: 100%;
   width: 100%;
-  padding: 1em 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 6.5em;
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 20px;
   color:white;
   opacity: 1;
+  z-index: 1;
+}
+.attendant{
+  position: relative;
+  background: url("./images/IMG-20201029-WA0007.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.attendant::after{
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;   
+}
+
+.aides{
+  position: relative;
+  background: url("./images/IMG-20201029-WA0009.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.aides::after{
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.nurse{
+  position: relative;
+  background: url("./images/TCH_palliative_care.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nurse::after{
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.volunteer{
+  position: relative;
+  background: url("./images/IMG-20201029-WA0008.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.volunteer::after{
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 /* How it works section */
 .how__intro{
-  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
+  position: relative;
+  height: max-content;
+}
+.how__intro::after{
+  content: "";
+  background: url("./images/TCH_palliative_care.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
 }
 
 .how__intro__title{
@@ -201,12 +313,19 @@ section{
 .how__intro__list{
   display: flex;
   justify-content: space-around;
-  padding: 5% 5% 2% 5%;
+  padding: 7% 5% 2% 5%;
 }
 
 .how__intro__list li{
+  margin: 0 1em;
+  padding-top: 30px;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 150px;
   display: flex;
-  
+  background-color: white;
+  border-radius: 10px;
 }
 .how__intro__list p{
   width: 75%;
@@ -214,7 +333,7 @@ section{
 }
 
 .how__intro--button {
-  padding: 5% 0% 5% 0%;
+  padding: 10% 0% 5% 0%;
   display: flex;
   justify-content: center;
 }
@@ -236,7 +355,22 @@ section{
 
 /* Plan section */
 .plan__intro{
-  background: linear-gradient(to left, #B8C6DB,#F5F7FA);
+  position: relative;
+}
+
+.plan__intro::after{
+  content: "";
+  background: url("./images/IMG-20201029-WA0008.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 .plan__intro__title{
@@ -248,24 +382,46 @@ section{
 }
 
 .plan__intro__para{
-  padding: 1% 5% 2% 5%;
+  padding: 4% 10% 5% 10%;
   width: 100%;
   font-size: 20px;
   justify-content: center;
   text-align: center;
 }
+
+.side__by__side{
+  padding-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2%;
+  display: grid;
+  grid-template-areas: 
+  'list logo'
+  'list . ';
+
+}
+
+
 .plan__intro__list {
-  padding-left: 5%;
+  grid-area: list;
 }
 
 .plan__intro__list li{
-  padding-bottom: 1%;
+  padding-bottom: 2%;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 20px;
   color: teal;
 }
+
+.icon{
+  justify-content: center;
+  grid-area: logo;
+  border-radius: 10px;
+  position: relative;
+}
+
 
 /* about */
 .about__intro{
@@ -306,7 +462,7 @@ section{
 .footer {
   background:black;
   color: white;
-  padding: 1% 5%;
+  padding: 5% 5%;
   font-size: var(--fs-h3);
 }
 
@@ -375,7 +531,7 @@ section{
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.2s ease-in;
-    z-index: 1;
+    z-index: 2;
   }
   .nav__links li{
     opacity: 0;
@@ -411,6 +567,7 @@ section{
   .how__intro__list li{
     text-align: center;
     margin-bottom: 1em;
+    padding-top: 50px;
   }
   .how__intro__list p {
     width: 100%;
@@ -418,6 +575,13 @@ section{
 
   .about__intro__para{
     width: 100%;
+  }
+  .side__by__side{
+    display: flex;
+    flex-direction: column;
+  }
+  .icon{
+    margin-top: 5%;
   }
   .footer{
     padding: 2em 2em;
