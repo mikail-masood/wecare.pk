@@ -165,7 +165,7 @@ button {
 }
 #message {
   font-size: 18px;
-  margin-left: 0.25em;
+  margin-top: 8px;
   padding: .25em, .25em;
   border: none;
   resize: none;
