@@ -48,20 +48,47 @@ nav{
 }
 
 /* about */
+
 .about__intro{
   height: 92vh;
   background: white;
 }
 .about__intro__title{
-  padding: 5% 0% 5% 0%;
-  font-size: 40px;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 60px;
   font-weight: bold;
-  justify-content: center;
-  text-align: center;
+  justify-content: start;
+  text-align: left;
 }
+
 .about__intro__para{
+  margin-top: 2%;
+  width: 0%;
   font-size: 26px;
 }
+
+.how__intro--button {
+  padding: 0.5% 0% 5% 5%;
+  display: flex;
+}
+
+.how__intro--button a{
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.25em 0.25em;
+  text-align: center;
+  display: block;
+  width: 8em;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+}
+
+
 
 /* Footer styles */
 .footer {
@@ -155,6 +182,10 @@ nav{
   }
   .footer{
     padding: 2em 2em;
+  }
+
+  .about__intro__para{
+    padding: 5% 5% 5% 5%;
   }
 }
 
