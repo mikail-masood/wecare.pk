@@ -3,7 +3,21 @@
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: 'Roboto Condensed', sans-serif;
+  
+  --body-font: 'Source Sans Pro', sans-serif;
+  --header-font: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--header-font);
+}
+
+p{
+  font-family: var(--body-font);
+}
+
+a{
+  font-family: var(--body-font);
 }
 
 /* nav bar default (full screen) */
@@ -84,42 +98,44 @@ section{
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.3;
+  opacity: 0;
 }
 
-
-.intro__title{
-  padding: 0em, 1em;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
+.text__wrapper{
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  bottom: 150px;
-  left: 20px;
+  top: 20%;
+  left: 10%;
+}
+.intro__title{
+  color: black;
   z-index: 1;
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 3%;
 }
 
 .learn__more--button{
-  padding: 0em 1em;
   z-index: 1;
-  height: 42px;
+  height: 100%;
 }
 
 .learn__more--button a{
   border-radius: 10px;
   cursor: pointer;
-  padding: 0.25em 0.25em;
+  padding: 0.75em 1em;
   text-align: center;
   display: block;
-  width: 8em;
+  width: 10em;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 20px;
-  background-color: teal;
+  background-color: #ff8c81;
   color: white;
-  position: absolute;
-  margin-top: -12%;
   z-index: 1;
 }
 /* Slider */
@@ -140,18 +156,14 @@ section{
 /* Services */
 .services__intro{
   position: relative;
-  height: max-content;
+  height: fit-content;
 }
 .services__intro::after{
   content: "";
-  background-image:url("./images/IMG-20201029-WA0010.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  opacity: 0.5;
+  background-color: white;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
@@ -159,23 +171,23 @@ section{
 
 
 .services__intro__title{
-  padding: 1% 0% 3% 0%;
-  font-size: 30px;
+  padding: 1% 10% 3% 10%;
+  font-size: 55px;
   font-weight: bold;
-  justify-content: center;
-  text-align: center;
+  justify-content: right;
+  text-align: left;
 }
 
 .services__intro__para{
   padding: 1% 10% 2% 10%;
   width: 100%;
-  font-size: 20px;
-  justify-content: center;
-  text-align: center;
+  font-size: 24px;
+  justify-content: left;
+  text-align: left;
 }
 
 .services__intro__list{
-  padding: 8% 0% 2% 0%;
+  padding: 4% 10% 2% 10%;
   display: flex;
   justify-content: space-around;
 }
@@ -184,33 +196,32 @@ section{
   list-style: none;
   cursor: pointer;
   display: flex;
-  height: 200px;
-  width: 200px;
-  align-items: flex-end ;
-  border-radius: 10px;
+  height: fit-content;
 }
 
 .services__intro__list a{
   text-align: center;
-  height: 100%;
+  height: fit-content;
   width: 100%;
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 6.5em;
   text-decoration: none;
   letter-spacing: 3px;
-  font-size: 20px;
-  color:white;
+  font-size: 24px;
+  font-weight: bold;
+  color:  #ff8c81;
   opacity: 1;
   z-index: 1;
 }
-.attendant{
-  position: relative;
-  background: url("./images/IMG-20201029-WA0007.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.service__wrapper{
+  display: flex;
+  flex-direction: column;
 }
+
+.attendant__image{
+  width: 100%;
+}
+/*
 .attendant::after{
   content: "";
   background-color: black;
@@ -222,14 +233,12 @@ section{
   position: absolute;
   z-index: 0;   
 }
+*/
 
-.aides{
-  position: relative;
-  background: url("./images/IMG-20201029-WA0009.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.aides__image{
+  width: 100%;
 }
+/*
 .aides::after{
   content: "";
   background-color: black;
@@ -241,15 +250,12 @@ section{
   position: absolute;
   z-index: 0;
 }
+*/
 
-.nurse{
-  position: relative;
-  background: url("./images/TCH_palliative_care.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.nurse__image{
+  width: 100%;
 }
-
+/*
 .nurse::after{
   content: "";
   background-color: black;
@@ -261,15 +267,12 @@ section{
   position: absolute;
   z-index: 0;
 }
+*/
 
-.volunteer{
-  position: relative;
-  background: url("./images/IMG-20201029-WA0008.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.volunteer__image{
+  width: 100%;
 }
-
+/*
 .volunteer::after{
   content: "";
   background-color: black;
@@ -281,87 +284,112 @@ section{
   position: absolute;
   z-index: 0;
 }
-
+*/
 /* How it works section */
 .how__intro{
-  position: relative;
   height: max-content;
 }
+/*
 .how__intro::after{
   content: "";
-  background: url("./images/TCH_palliative_care.jpeg");
+  background: url("./images/Humaaans\ -\ 2\ Characters.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  opacity: 0.3;
+  opacity: 1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;  
-}
+  width: 100%;
+}*/
 
 .how__intro__title{
-  padding: 1% 0% 1% 0%;
-  font-size: 30px;
+  padding: 1% 0% 1% 10%;
+  font-size: 55px;
   font-weight: bold;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
 }
-
+.how__wrapper{
+  display: flex;
+  width: 100%;
+}
 .how__intro__list{
   display: flex;
-  justify-content: space-around;
-  padding: 7% 5% 2% 5%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5% 5% 2% 7%;
+  opacity: 1;
+  z-index: 2;
+  position: absolute
 }
 
 .how__intro__list li{
-  margin: 0 1em;
+  margin: 1em 1em;
   padding-top: 30px;
   justify-content: center;
   text-align: center;
   width: 400px;
   height: 150px;
   display: flex;
-  background-color: white;
+  background-color: #cce6e6;
+  color: black;
   border-radius: 10px;
+  z-index: 2;
+  
 }
 .how__intro__list p{
   width: 75%;
   font-size: 20px;
+  z-index: 2;
+}
+
+.how__image{
+  position: relative;
+  object-fit: cover;
+  margin-left: 30%;
+}
+.how__image img{
+  z-index: -1;
 }
 
 .how__intro--button {
   padding: 10% 0% 5% 0%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .how__intro--button a{
   border-radius: 10px;
   cursor: pointer;
-  padding: 0.25em 0.25em;
+  padding: 0.75em 0.5em;
   text-align: center;
   display: block;
-  width: 8em;
+  width: 10em;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 20px;
-  background-color: teal;
+  background-color:#ff8c81;
   color: white;
 }
 
 /* Plan section */
+
 .plan__intro{
   position: relative;
 }
 
 .plan__intro::after{
   content: "";
+  background-color: white;
+  /*;
   background: url("./images/IMG-20201029-WA0008.jpg");
   background-repeat: no-repeat;
+  */
   background-position: center;
   background-size: cover;
   opacity: 0.3;
@@ -374,19 +402,19 @@ section{
 }
 
 .plan__intro__title{
-  padding: 1% 0% 1% 0%;
-  font-size: 30px;
+  padding: 1% 0% 1% 10%;
+  font-size: 55px;
   font-weight: bold;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
 }
 
 .plan__intro__para{
   padding: 4% 10% 5% 10%;
   width: 100%;
-  font-size: 20px;
-  justify-content: center;
-  text-align: center;
+  font-size: 24px;
+  justify-content: left;
+  text-align: left;
 }
 
 .side__by__side{
@@ -396,8 +424,8 @@ section{
   padding-bottom: 2%;
   display: grid;
   grid-template-areas: 
-  'list logo'
-  'list . ';
+  'logo list'
+  '. list';
 
 }
 
@@ -407,12 +435,15 @@ section{
 }
 
 .plan__intro__list li{
-  padding-bottom: 2%;
+  padding: 3%;
+  margin-bottom: 3%;
   text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 20px;
-  color: teal;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 24px;
+  color:black;
+  background-color:#cce6e6;
+  border-radius: 10px;
 }
 
 .icon{
@@ -420,6 +451,7 @@ section{
   grid-area: logo;
   border-radius: 10px;
   position: relative;
+  width: 75%;
 }
 
 
@@ -541,22 +573,54 @@ section{
   }
 
   /* Intro */ 
-  .background__img{
-    height: 30%;
+  .background__img img{
+    height: 100%;
+    width: 100%;
+    object-fit:none ;
+    display: block;
+    position: relative;
+  }
+  .text__wrapper{
+    display: flex;
+    flex-direction: column;
+    top: 20%;
   }
   .intro__title{
-    font-size: 25px;
+    font-size: 35px;
+    margin-bottom: 3%;
   }
-  .learn__more--button{
-    margin-top: -20%;
+  .services__intro{
+    height: fit-content;
   }
+
   .services__intro__list{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .services__intro__list a{
+    height: min-content;
+    padding-bottom: 0%;
+  }
   .services__intro__list li{
-    margin-bottom: 1em;
+    height: min-content;
+    padding-bottom: 0%;
+  }
+
+  .attendant__image{
+    object-fit: scale-down;
+  }
+
+  .aides__image{
+    object-fit: scale-down;
+  }
+
+  .nurse__image{
+    object-fit: scale-down;
+  }
+
+  .volunteer__image{
+    object-fit: scale-down;
   }
 
   .how__intro__list{
@@ -572,6 +636,33 @@ section{
   .how__intro__list p {
     width: 100%;
   }
+  
+  .how__image{
+    margin-top: 100%;
+    margin-left: -1%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .how__wrapper{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how__intro--button a{
+    margin-top: -5%;
+  }
+
+  .plan__intro{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
 
   .about__intro__para{
     width: 100%;
@@ -582,6 +673,7 @@ section{
   }
   .icon{
     margin-top: 5%;
+    width: 100%;
   }
   .footer{
     padding: 2em 2em;
