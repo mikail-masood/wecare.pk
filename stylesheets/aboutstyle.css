@@ -3,7 +3,20 @@
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: 'Roboto Condensed', sans-serif;
+  --body-font: 'Source Sans Pro', sans-serif;
+  --header-font: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--header-font);
+}
+
+p{
+  font-family: var(--body-font);
+}
+
+a{
+  font-family: var(--body-font);
 }
 
 /* nav bar default (full screen) */
@@ -50,7 +63,7 @@ nav{
 /* about */
 
 .about__intro{
-  height: 92vh;
+  height: max-content;
   background: white;
 }
 .about__intro__title{
@@ -62,21 +75,42 @@ nav{
   text-align: left;
 }
 
-.about__intro__para{
+.wrapper{
+  display: flex;
   margin-top: 2%;
-  width: 0%;
+  margin-left: 1%;
+}
+
+.about__intro__para{
+  justify-items: left;
+  text-align: left;
+  padding: 10%;
+  width: 50%;
+}
+
+.about__intro__para p{
+  justify-content: left;
+  text-align: left;
   font-size: 26px;
+  background-color: teal;
+}
+
+.about__image{
+  height: 50%;
+  width: 35%;
+  padding-left: 5%;
 }
 
 .how__intro--button {
-  padding: 0.5% 0% 5% 5%;
   display: flex;
 }
 
 .how__intro--button a{
+  margin-left: 20%;
+  margin-bottom: 5%;
   border-radius: 10px;
   cursor: pointer;
-  padding: 0.25em 0.25em;
+  padding: 0.75em 0.55em;
   text-align: center;
   display: block;
   width: 8em;
@@ -84,7 +118,7 @@ nav{
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 20px;
-  background-color: teal;
+  background-color: #ff8c81;
   color: white;
 }
 
@@ -177,8 +211,21 @@ nav{
   .burger{
     display: block;
   }
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  
   .about__intro__para{
     width: 100%;
+  }
+  .about__image{
+    width: 100%;
+  }
+  .how__intro--button{
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-bottom: 10%;
   }
   .footer{
     padding: 2em 2em;

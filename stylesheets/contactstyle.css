@@ -2,8 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
+  --body-font: 'Source Sans Pro', sans-serif;
+  --header-font: 'Montserrat', sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--header-font);
+}
+
+p{
+  font-family: var(--body-font);
+}
+
+a{
+  font-family: var(--body-font);
+}
+label {
+  font-family: var(--body-font);
+}
+input{
+  font-family: var(--body-font);
+}
+textarea{
+  font-family: var(--body-font);
 }
 /* nav bar default (full screen) */
 nav{
